@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Cosme</title>
+    <link rel="stylesheet" type="" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <a href="#">
+                <img src="image/tree-53e6dc464a_640.jpg" class="logo" width="70" height="70">
+            </a>
+            <div id="app">
+                <div class="hamburger_btn" v-on:click='ActiveBtn =! ActiveBtn'>
+                    <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+                    <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+                    <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+                </div>
+                <transition name="menu">
+                    <div class="menu" v-show="ActiveBtn">
+                        <ul>
+                            <li><a href="#concept">Concept</a></li>
+                            <li><a href="#item">Item</a></li>
+                            <li><a href="#allitem">All Item</a></li>
+                            <li><a href="#news">News</a></li>
+                        </ul>
+                    </div>
+                </transition>
+            </div>
+
+            <div class="title">
+                <h2>Organic Cosme</h2>
+                <p>自然との共生</p>
+            </div>
+        </header>
+        <div class="content">
+            <div class="message container">
+                <p>Organic Cosmeは、「自然との共生」をテーマにしたコスメブランドです。
+                    <br>わたしたちは、自然を感じられるモノを提案します。</p>
+            </div>
+            <div class="image container">
+                <img class="package col-5 mt-0" src="image/photo-1583158957180-0c6d86a47572.jpg">
+                <img class="plants col-5 mt-5" src="image/photo-1579331638328-817189abd2aa.jpg">
+            </div>
+            <div class="concept container">
+                <h1><a name="concept">Concept</a></h1>
+                <p class="japanese">コンセプト</p>
+                <p class="detail col-10 offset-1 col-md-6 offset-md-3 mt-5">
+                    わたしたちは、波のようにゆらいでいる。<br><br>調子がいい時だって、わるい時だって。こころ、カラダ、環境、いろんなものが変化しながら迷いや不安の中で、それでも自分らしくあろうとする。<br><br>そんな時、ゆらぎはきっと「自分が何を大切にしているのか」を教えてくれる。
+                </p>
+                <p class="detail col-10 offset-1 col-md-6 offset-md-3">
+                    仕事、恋愛、未来、いろんなゆらぎを持つわたしたちが、立ち止まる時。振り返る時。新しい一歩を踏み出す時。その足どりが少しだけ軽くなるように。今の自分をもう少しだけ愛せるように。<br><br>好きな香りを纏って。そのonde（波）を連れて。
+                </p>
+            </div>
+            <div class="item container">
+                <div class="outline">
+                    <h1><a name="item">Item</a></h1>
+                    <p class="japanese">アイテム</p>
+                    <div class="row">
+                        <img src="image/outline.jpg" class="col-md-3 offset-md-2">
+                        <div class="itemoutline col-12 col-md-6 mt-4">
+                            <h2>Nature Toner</h2>
+                            <p class="mb-5">ネイチャートナー</p>
+                            <p>自然を感じながら潤いを与える</p>
+                            <p>オーガニック素材にこだわった化粧水</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail container">
+                    <div class="itemmenu">
+                        <ul>
+                            <li class="itemtop">
+                                <span>01</span>
+                                <a href="#toner">Toner</a>
+                            </li>
+                            <li>
+                                <span>02</span>
+                                <a href="#emulsion">Emulsion</a>
+                            </li>
+                            <li>
+                                <span>03</span>
+                                <a href="#serum">Serum</a>
+                            </li>
+                            <li>
+                                <span>04</span>
+                                <a href="#moisturizingcream">Moisturizing cream</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="toner row itemrow">
+                        <img src="image/toner.jpg" class="col-12 col-md-6">
+                        <div class="col-12 col-md-6">
+                            <h1 class="mt-3"><a name="toner">Toner</a></h1>
+                            <p class="itemnamesmall">化粧水</p>
+                            <p>「肌に水分を与える」、「皮脂の分泌を整える」役割がある。肌を乾燥から守り、肌の水分キープ力や外部刺激から肌を守るバリア機能を高める</p>
+                        </div>
+                    </div>
+                    <div class="emulsion row itemrow">
+                        <div class="col-12 col-md-6 itemconten">
+                            <h1><a name="emulsion">Emulsion</a></h1>
+                            <p class="itemnamesmall">乳液</p>
+                            <p class="mb-3">乳液の油分で膜を作ってあげることで肌の内側に化粧水の水分や美容成分を閉じ込めるのが乳液の役割。肌本来の潤い成分である「セラミド」などの成分を肌に届ける
+                            </p>
+                        </div>
+                        <img src="image/emulsion.jpg" class="col-12 col-md-6">
+                    </div>
+                    <div class="serum row itemrow">
+                        <img src="image/serum.jpg" class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 itemconten">
+                            <h1 class="mt-3"><a name="serum">Serum</a></h1>
+                            <p class="itemnamesmall">美容液</p>
+                            <p>保湿や美白、シワ対策など、目的に合わせた集中的なケアをするためのプラスワンアイテム。乳液の役割保湿の仕上げのアイテムで、油分と水分をバランスよく配合している</p>
+                        </div>
+                    </div>
+                    <div class="moisturizingcream row itemrow">
+                        <div class="col-12 col-md-6 itemconten">
+                            <h1><a name="moisturinzingcream">Moisturizing cream</a></h1>
+                            <p class="itemnamesmall">保湿クリーム</p>
+                            <p class="mb-3">肌に含まれている水分を蒸発させないようにする。「水分の蒸発を防ぐ」はたらき、つまり、汗と皮脂からできる皮脂膜と近いはたらきをするスキンケアアイテム
+                            </p>
+                        </div>
+                        <img src="image/moisturinzingcream.jpg" class="col-12 col-md-6">
+                    </div>
+                </div>
+                <div class="point container">
+                    <h2>Point</h2>
+                    <p>特徴</p>
+                    <ul class="feature">
+                        <li class="col-12 col-md-10 offset-md-1 row">
+                            <div class="pointimage col-3 col-md-3">
+                                <img src="image/material.jpg" class="pointphoto">
+                            </div>
+                            <div class="pointcontent col-9 col-md-9">
+                                <p class="material">素材</p>
+                                <p>オーガニックな素材</p>
+                            </div>
+                        </li>
+                        <li class="col-12 col-md-10 offset-md-1 row">
+                            <div class="pointimage col-3 col-md-3">
+                                <img src="image/smell.jpg" class="pointphoto">
+                            </div>
+                            <div class="pointcontent col-9">
+                                <p class="smell">香り</p>
+                                <p>自然の中にいるような香り</p>
+                            </div>
+                        </li>
+                        <li class="col-12 col-md-10 offset-md-1 row">
+                            <div class="pointimage col-3 col-md-3">
+                                <img src="image/design.jpg" class="pointphoto">
+                            </div>
+                            <div class="pointcontent col-9">
+                                <p class="design">デザイン</p>
+                                <p>飾れるデザイン</p>
+                            </div>
+                        </li>
+                        <li class="col-12 col-md-10 offset-md-1 row">
+                            <div class="pointimage col-3 col-md-3">
+                                <img src="image/other.jpg" class="pointphoto">
+                            </div>
+                            <div class="pointcontent col-9">
+                                <p class="eco">環境</p>
+                                <p>環境に優しいパッケージ</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-list container">
+                    <h1><a name="allitem">All Item</a></h1>
+                    <p class="japanese">すべてのアイテム</p>
+                    <div>
+                        <h2>Toner</h2>
+                        <p>化粧水</p>
+                        <ul class="itemlist">
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item.jpg" alt="">
+                                <p>Red</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item.jpg" alt="">
+                                <p>Blue</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item.jpg" alt="">
+                                <p>Yellow</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5">
+                                <img src="image/item.jpg" alt="">
+                                <p>Green</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Emulsion</h2>
+                        <p>乳液</p>
+                        <ul class="itemlist">
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item2.jpg" alt="">
+                                <p>Red</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item2.jpg" alt="">
+                                <p>Blue</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item2.jpg" alt="">
+                                <p>Yellow</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5">
+                                <img src="image/item2.jpg" alt="">
+                                <p>Green</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Serum</h2>
+                        <p>美容液</p>
+                        <ul class="itemlist">
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item3.jpg" alt="">
+                                <p>Red</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item3.jpg" alt="">
+                                <p>Blue</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5 mr-md-5">
+                                <img src="image/item3.jpg" alt="">
+                                <p>Yellow</p>
+                            </li>
+                            <li class="col-5 col-md-2 ml-3 ml-md-5">
+                                <img src="image/item3.jpg" alt="">
+                                <p>Green</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about container">
+                    <h1>About</h1>
+                    <p>私たちについて</p>
+                    <p class="aboutcontent col-md-3">Organic Cosmeは、人と自然との「つながり」をテーマに開発しています。
+                        五感で感じられるプロダクトをお届けします。</p>
+                </div>
+                <div class="news container">
+                    <h1><a name="news">News</a></h1>
+                    <p class="japanese">ニュース</p>
+                    <div class="newscontent col-md-6 offset-md-3">
+                        <span class="newsdate ml-3">2020.00.00</span>
+                        <span class="newsabout">発売を開始しました</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="outgoing">
+        <h1>Outgoing</h1>
+        <p>発信</p>
+        <p>Organic Cosmeの情報を発信していきます。</p>
+        <div class="overflow-hidden">
+            <div class="flex -mx-4 img-ticker">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing1.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing2.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing3.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing4.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing5.jpg" alt="">
+
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing1.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing2.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing3.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing4.jpg" alt="">
+                <img class="w-64 mx-4 self-start flex-none" src="image/outgoing5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="sns">
+            <a href="https://twitter.com/home?lang=ja" target="_blank"><img
+                    src="https://img.icons8.com/color/48/000000/twitter-squared.png" /></a>
+            <a href="https://www.instagram.com/" target="_blank"><img
+                    src="https://img.icons8.com/fluent/48/000000/instagram-new.png" /></a>
+        </div>
+        <div class="footer">
+            <div class="footermenu">
+                <div class="footer_menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="image/tree-53e6dc464a_640.jpg" class="footerlogo" width="70" height="70">
+                            </a>
+                        </li>
+                        <li><a href="#concept">コンセプト</a></li>
+                        <li><a href="#item">アイテム</a></li>
+                        <li><a href="#news">ニュース</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">運営会社</a></li>
+                        <li><a href="#">特別取引商法に基づく表示</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>&copy; 2020 Organic Cosme</small>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
