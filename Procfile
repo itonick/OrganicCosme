@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
+web: gunicorn organic-cosme.wsgi:application -b 0.0.0.0:$PORT
